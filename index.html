@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Profile | Manoj Janardhan Bodade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <nav class="top-nav container">
+      <div class="brand">AS | Artisan Studio</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact-cta">Contact</a>
+        <button id="openLoginBtn" class="btn btn-sm" onclick="testLogin()">Admin Login</button>
+        <button id="logoutBtn" class="btn btn-sm hidden">Logout</button>
+        <div id="profileDropdown" class="profile-dropdown hidden">
+          <button id="profileDropdownBtn" class="profile-dropdown-btn">
+            <img id="navProfilePhoto" class="nav-profile-photo" src="./assets/profile-placeholder.svg" alt="Profile">
+            <span class="dropdown-arrow">▼</span>
+          </button>
+          <div id="profileDropdownMenu" class="profile-dropdown-menu hidden">
+            <div class="dropdown-header">
+              <img id="dropdownProfilePhoto" class="dropdown-profile-photo" src="./assets/profile-placeholder.svg" alt="Profile">
+              <div class="dropdown-info">
+                <span id="dropdownEmail" class="dropdown-email">admin@example.com</span>
+                <span class="dropdown-role">Administrator</span>
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <button id="changeProfilePhotoBtn" class="dropdown-item">
+              <span class="dropdown-icon">📷</span>
+              Change Profile Photo
+            </button>
+            <button id="changeCredentialsBtn" class="dropdown-item">
+              <span class="dropdown-icon">🔑</span>
+              Login Settings
+            </button>
+            <button id="themeToggleBtn" class="dropdown-item">
+              <span class="dropdown-icon">🌙</span>
+              Dark Theme
+            </button>
+            <button id="helpBtn" class="dropdown-item">
+              <span class="dropdown-icon">❓</span>
+              Help & Support
+            </button>
+            <div class="dropdown-divider"></div>
+            <button id="dropdownLogoutBtn" class="dropdown-item logout-item">
+              <span class="dropdown-icon">🚪</span>
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-content container">
+      <div class="hero-layout">
+        <div class="hero-profile-block">
+          <div class="profile-photo-container">
+            <img id="profilePhoto" class="profile-photo" src="./assets/profile-placeholder.svg" alt="Profile photo" />
+            <button id="changePhotoBtn" class="change-photo-btn hidden" title="Change profile photo">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 4V1h2v3h3v2H5v3H3V6H0V4h3zm3 6V7h3V4h7l1.83 2H21c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V10h3zm7 9c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0-1.8c-1.77 0-3.2-1.43-3.2-3.2s1.43-3.2 3.2-3.2 3.2 1.43 3.2 3.2-1.43 3.2-3.2 3.2z"/>
+              </svg>
+            </button>
+          </div>
+          <h1>Manoj Janardhan Bodade</h1>
+          <p class="title">Master Artist & Interior Design Specialist</p>
+          <p class="hero-tagline">Transforming spaces, creating memories, inspiring lives through the power of art</p>
+          <div class="cta-group">
+            <a class="btn btn-outline" href="#portfolio">Explore Portfolio</a>
+            <a class="btn" href="#contact">Start Your Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section container">
+      <h2>About</h2>
+      <p>
+        Welcome to Artisan Studio, where creativity meets craftsmanship. With over 12 years of passionate dedication to Fine Art and Interior Design, 
+        I transform ordinary spaces into extraordinary experiences through the power of visual storytelling.
+      </p>
+      <p>
+        My journey began with a simple belief: every wall has a story to tell, and every space deserves to inspire. From intimate residential corners 
+        to grand commercial establishments, I specialize in creating immersive environments that reflect your unique vision and personality.
+      </p>
+      <p>
+        What sets my work apart is the perfect blend of traditional artistic techniques with contemporary design sensibilities. Whether it's a 
+        vibrant mural that captures the essence of your brand, a sophisticated interior that elevates your lifestyle, or a custom sculpture 
+        that becomes the centerpiece of your space, each project is crafted with meticulous attention to detail and unwavering commitment to excellence.
+      </p>
+      <div class="about-meta">
+        <article class="meta-card">
+          <h3>Experience</h3>
+          <p>12+ years of professional artistry</p>
+        </article>
+        <article class="meta-card">
+          <h3>Location</h3>
+          <p>Khutala, Chandrapur 442406</p>
+        </article>
+        <article class="meta-card">
+          <h3>Studio</h3>
+          <p>Artisan Studio - Where Art Comes Alive</p>
+        </article>
+        <article class="meta-card">
+          <h3>Specialty</h3>
+          <p>Custom Murals & Interior Transformation</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <h2>Expertise & Services</h2>
+        <p class="section-intro">Bringing your vision to life through diverse artistic mediums and innovative design solutions</p>
+        <div class="expertise-grid">
+          <article class="skill-card">
+            <h3>🎨 Creative Painting & Portraits</h3>
+            <p>Lifelike portraits, custom canvas art, and personalized paintings that capture emotions and memories with stunning detail</p>
+          </article>
+          <article class="skill-card">
+            <h3>🖼️ Large-Scale Murals</h3>
+            <p>Transformative wall art for homes, offices, and public spaces. From abstract designs to realistic landscapes and brand storytelling</p>
+          </article>
+          <article class="skill-card">
+            <h3>🏺 Custom Sculptures</h3>
+            <p>Unique 3D art pieces using scrap metal, FRP, and mixed media. Perfect for gardens, lobbies, and artistic installations</p>
+          </article>
+          <article class="skill-card">
+            <h3>🏠 Interior Design & Styling</h3>
+            <p>Complete space transformation including color schemes, furniture placement, lighting design, and decorative elements</p>
+          </article>
+          <article class="skill-card">
+            <h3>💡 Concept Development</h3>
+            <p>From initial sketches to 3D visualizations, bringing your ideas to life before the first brushstroke</p>
+          </article>
+          <article class="skill-card">
+            <h3>🎬 Set Design & Props</h3>
+            <p>Creative environments for films, events, and commercial shoots. Specializing in themed backdrops and artistic installations</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Featured Projects & Achievements</h2>
+      <p class="section-intro">A journey through creativity - from intimate spaces to grand public installations</p>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>🎬 Film Set Design & Visual Storytelling</h3>
+          <p>Created immersive environments for multiple film productions, specializing in period sets and fantasy worlds. 
+          Collaborated with directors to bring scripts to life through detailed set pieces and atmospheric design.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>🚇 Nagpur Metro Mural Project</h3>
+          <p>Commissioned for large-scale public art installations celebrating local culture and heritage. 
+          These vibrant murals now welcome thousands of daily commuters, showcasing the rich history and future aspirations of the region.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>🖼️ Portrait Gallery & Commission Works</h3>
+          <p>Over 200+ custom portraits completed, ranging from family heirlooms to corporate leadership galleries. 
+          Each piece captures not just likeness, but the essence and personality of the subject.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>🏡 Luxury Residential Transformations</h3>
+          <p>Complete interior makeovers for 50+ homes, creating personalized sanctuaries that reflect each family's lifestyle. 
+          From modern minimalist to traditional elegance, every project tells a unique story.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>☕ Hospitality & Commercial Spaces</h3>
+          <p>Designed captivating interiors for cafes, restaurants, and bars across Maharashtra. 
+          These spaces don't just serve food and drinks - they create memorable experiences and Instagram-worthy moments.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>🏆 Awards & Recognition</h3>
+          <p>Featured in local art exhibitions and design magazines. Winner of "Best Mural Design 2023" 
+          and "Excellence in Interior Innovation 2022" by Maharashtra Art Council.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section section-dark">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="murals">Murals</button>
+          <button class="filter-btn" data-filter="interiors">Interiors</button>
+          <button class="filter-btn" data-filter="sculptures">Sculptures</button>
+          <button class="filter-btn" data-filter="paintings">Paintings</button>
+        </div>
+
+        <div class="portfolio-grid" id="portfolioGrid">
+          <article class="portfolio-card" data-category="murals">
+            <img src="./assets/wall-painting-1.png" alt="Wall Painting 1" />
+            <div class="portfolio-overlay">
+              <h3>Wall Painting 1</h3>
+              <p class="portfolio-category">Murals</p>
+              <p class="portfolio-desc">Large wall composition work from site project collection.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="murals">
+            <img src="./assets/wall-painting.png" alt="Wall Painting" />
+            <div class="portfolio-overlay">
+              <h3>Wall Painting</h3>
+              <p class="portfolio-category">Murals</p>
+              <p class="portfolio-desc">Color-driven mural panel with portrait style execution.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="murals">
+            <img src="./assets/murals-siporex.png" alt="Murals - SIPOREX" />
+            <div class="portfolio-overlay">
+              <h3>Murals - SIPOREX</h3>
+              <p class="portfolio-category">Public Art</p>
+              <p class="portfolio-desc">SIPOREX mural and facade artwork for architectural surface.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="sculptures">
+            <img src="./assets/murals-frp.png" alt="Murals FRP" />
+            <div class="portfolio-overlay">
+              <h3>Murals FRP</h3>
+              <p class="portfolio-category">Sculpture / Installation</p>
+              <p class="portfolio-desc">FRP and sculpture-driven visual installation project.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-work.png" alt="Interior Work" />
+            <div class="portfolio-overlay">
+              <h3>Interior Work</h3>
+              <p class="portfolio-category">Interior</p>
+              <p class="portfolio-desc">Interior design and decor execution for commercial spaces.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="murals">
+            <img src="./assets/mural-neon-portrait.png" alt="Neon Portrait Mural" />
+            <div class="portfolio-overlay">
+              <h3>Neon Portrait Mural</h3>
+              <p class="portfolio-category">Murals</p>
+              <p class="portfolio-desc">Night-view mural portrait with high contrast color treatment.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-cafeteria-mural.png" alt="Cafeteria Interior Art" />
+            <div class="portfolio-overlay">
+              <h3>Cafeteria Interior Art</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Dining area wall graphics and concept-based interior enhancement.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="murals">
+            <img src="./assets/mural-wall-progress.png" alt="Large Wall Mural Progress" />
+            <div class="portfolio-overlay">
+              <h3>Large Wall Mural Progress</h3>
+              <p class="portfolio-category">Murals</p>
+              <p class="portfolio-desc">Execution stage of large-scale urban wall mural project.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="paintings">
+            <img src="./assets/portrait-mgd.png" alt="Portrait Painting - MGD" />
+            <div class="portfolio-overlay">
+              <h3>Portrait Painting - MGD</h3>
+              <p class="portfolio-category">Paintings</p>
+              <p class="portfolio-desc">Hand-painted portrait artwork with stylized expression.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-rustic-studio.png" alt="Rustic Studio Interior" />
+            <div class="portfolio-overlay">
+              <h3>Rustic Studio Interior</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Wood and texture-focused interior styling for studio ambiance.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-gym-cardio.png" alt="Gym Interior Cardio Zone" />
+            <div class="portfolio-overlay">
+              <h3>Gym Interior Cardio Zone</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Functional fitness interior with warm textures and spatial balance.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-industrial-seating.png" alt="Industrial Seating Concept" />
+            <div class="portfolio-overlay">
+              <h3>Industrial Seating Concept</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Recycled and industrial seating setup for collaborative space.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="paintings">
+            <img src="./assets/portrait-arch-wall.png" alt="Arch Wall Portrait Art" />
+            <div class="portfolio-overlay">
+              <h3>Arch Wall Portrait Art</h3>
+              <p class="portfolio-category">Paintings</p>
+              <p class="portfolio-desc">Portrait mural composition inside architectural arch framing.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-gym-cycles.png" alt="Gym Interior Cycle Zone" />
+            <div class="portfolio-overlay">
+              <h3>Gym Interior Cycle Zone</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Cycle training area with integrated lighting and decor treatment.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-gym-strength.png" alt="Gym Strength Area Interior" />
+            <div class="portfolio-overlay">
+              <h3>Gym Strength Area Interior</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Strength zone interior styling with premium warm-tone finishing.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="interiors">
+            <img src="./assets/interior-cafe-seating.png" alt="Cafe Seating Interior" />
+            <div class="portfolio-overlay">
+              <h3>Cafe Seating Interior</h3>
+              <p class="portfolio-category">Interiors</p>
+              <p class="portfolio-desc">Cafe space planning with custom furniture and color accents.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+          <article class="portfolio-card" data-category="murals">
+            <img src="./assets/mural-street-wall.png" alt="Street Wall Mural Panel" />
+            <div class="portfolio-overlay">
+              <h3>Street Wall Mural Panel</h3>
+              <p class="portfolio-category">Murals</p>
+              <p class="portfolio-desc">Street-facing mural panel blending portrait and abstract forms.</p>
+              <span class="view-details-link">View Details</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-cta" class="section container contact-cta-section">
+      <div class="contact-cta-card">
+        <p class="contact-cta-lead">Ready to transform your space into something extraordinary?</p>
+        <p class="contact-cta-stats">Over <strong id="totalWorksCta">0</strong> successful projects completed with 100% client satisfaction</p>
+        <div class="contact-cta-actions">
+          <a class="btn" href="#contact">Get Free Consultation</a>
+          <a class="btn btn-outline" href="tel:+917385524077">Call Now</a>
+        </div>
+        <p class="cta-guarantee">✨ Free consultation • 📋 Detailed proposal • 🎨 Custom design concepts</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <h2>Admin Dashboard</h2>
+      <p id="adminStatus" class="hint">Admin is logged out. Login to manage profile and portfolio.</p>
+      <div class="stats-grid">
+        <article class="stat-card">
+          <h3>Total Projects</h3>
+          <p id="statTotal">0</p>
+        </article>
+        <article class="stat-card">
+          <h3>Active Projects</h3>
+          <p id="statActive">0</p>
+        </article>
+        <article class="stat-card">
+          <h3>Client Requests</h3>
+          <p id="statClient">0</p>
+        </article>
+        <article class="stat-card">
+          <h3>Bookings</h3>
+          <p id="statBookings">0</p>
+        </article>
+      </div>
+      <p class="hint">Numbers update from your portfolio count and visitor booking form submissions.</p>
+      
+      <div id="adminTools" class="admin-tools hidden">
+        <h3>📋 Recent Booking Requests</h3>
+        <div id="bookingsContainer" class="bookings-container">
+          <p class="no-bookings">No booking requests yet.</p>
+        </div>
+        
+        <h3>📧 Email Setup Instructions</h3>
+        <div class="email-setup-info">
+          <p>To receive emails automatically when someone contacts you:</p>
+          <ol>
+            <li>Go to <a href="https://emailjs.com" target="_blank">EmailJS.com</a> and create free account</li>
+            <li>Create email service (Gmail, Outlook, etc.)</li>
+            <li>Create email template</li>
+            <li>Get your Service ID, Template ID, and Public Key</li>
+            <li>Update the script.js file with your credentials</li>
+          </ol>
+          <p><strong>Alternative:</strong> Use contact form services like Formspree, Netlify Forms, or Google Forms</p>
+        </div>
+
+        <h3>➕ Add New Work</h3>
+        <form id="addWorkForm" class="admin-form">
+          <input type="text" id="workTitle" placeholder="Work Title" required />
+          <select id="workCategory" required>
+            <option value="">Select Category</option>
+            <option value="murals">Murals</option>
+            <option value="interiors">Interiors</option>
+            <option value="sculptures">Sculptures</option>
+            <option value="paintings">Paintings</option>
+          </select>
+          <textarea id="workDescription" rows="3" placeholder="Short Description" required></textarea>
+          <input type="file" id="workImage" accept="image/*" required />
+          <button class="btn" type="submit">Add Work to Portfolio</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <h2>Contact / Booking</h2>
+        <p class="section-intro">Ready to transform your space? Let's discuss your vision and bring it to life</p>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="contact-item">
+              <h4>📞 Phone</h4>
+              <p><a href="tel:+917385524077">+91 7385524077</a></p>
+            </div>
+            <div class="contact-item">
+              <h4>✉️ Email</h4>
+              <p><a href="mailto:manojbodade@gmail.com">manojbodade@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+              <h4>📍 Address</h4>
+              <p>Artisan Studio<br>Khutala, Chandrapur 442406<br>Maharashtra, India</p>
+            </div>
+            <div class="contact-item">
+              <h4>🕒 Working Hours</h4>
+              <p>Monday - Saturday: 9:00 AM - 7:00 PM<br>Sunday: By Appointment</p>
+            </div>
+          </div>
+          <form class="booking-form" id="bookingForm" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <h4>Get a Free Consultation</h4>
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="tel" name="phone" placeholder="Phone Number" />
+            <select name="projectType" required>
+              <option value="">Select Project Type</option>
+              <option value="mural">Mural Painting</option>
+              <option value="interior">Interior Design</option>
+              <option value="portrait">Portrait Commission</option>
+              <option value="sculpture">Custom Sculpture</option>
+              <option value="commercial">Commercial Project</option>
+              <option value="other">Other</option>
+            </select>
+            <textarea name="message" rows="4" placeholder="Tell us about your project vision, space dimensions, timeline, and budget range" required></textarea>
+            <button class="btn" type="submit">Request Free Consultation</button>
+            <p class="form-note">We'll respond within 24 hours with a detailed proposal</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="credentialsModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeCredentialsBtn" class="close-btn" aria-label="Close">&times;</button>
+      <h3>Login Settings</h3>
+      <p class="hint">Change your login email and password.</p>
+      <form id="changeCredentialsForm" class="admin-form">
+        <input type="email" id="credCurrentEmail" placeholder="Current email" readonly />
+        <input type="password" id="credCurrentPassword" placeholder="Current password" required autocomplete="current-password" />
+        <input type="email" id="credNewEmail" placeholder="New email (optional)" autocomplete="email" />
+        <input type="password" id="credNewPassword" placeholder="New password (optional)" autocomplete="new-password" />
+        <input type="password" id="credNewPassword2" placeholder="Confirm new password" autocomplete="new-password" />
+        <button class="btn" type="submit">Update Credentials</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="loginModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeLoginBtn" class="close-btn" aria-label="Close">&times;</button>
+
+      <div id="setupPanel" class="modal-panel hidden">
+        <h3>Create admin account</h3>
+        <p class="hint">Set the email and password you will use to manage this site.</p>
+        <form id="setupForm" class="auth-form">
+          <input type="email" id="setupEmail" placeholder="Your email" required autocomplete="email" />
+          <input type="password" id="setupPassword" placeholder="Password" required minlength="6" autocomplete="new-password" />
+          <input type="password" id="setupPassword2" placeholder="Confirm password" required minlength="6" autocomplete="new-password" />
+          <button class="btn" type="submit">Create account</button>
+        </form>
+      </div>
+
+      <div id="loginPanel" class="modal-panel">
+        <h3>Admin Login</h3>
+        <form id="loginForm" class="auth-form">
+          <input type="email" id="adminEmail" placeholder="Email" required autocomplete="username" />
+          <input type="password" id="adminPassword" placeholder="Password" required autocomplete="current-password" />
+          <button class="btn" type="submit">Sign In</button>
+          <button type="button" class="btn btn-outline" id="forgotPasswordBtn">Forgot Password</button>
+          <button type="button" class="btn btn-google" id="googleSignInBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Sign in with Google
+          </button>
+        </form>
+      </div>
+
+      <div id="forgotPasswordPanel" class="modal-panel hidden">
+        <h3>Reset Password</h3>
+        <p class="hint">Enter your email to reset your password.</p>
+        <form id="forgotPasswordForm" class="auth-form">
+          <input type="email" id="resetEmail" placeholder="Email" required autocomplete="email" />
+          <button class="btn" type="submit">Send Reset Link</button>
+          <button type="button" class="btn btn-outline" id="backToLoginBtn">Back to Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+    <div class="modal-card">
+      <button id="closeLoginBtn" class="close-btn" aria-label="Close">&times;</button>
+
+      <div id="setupPanel" class="modal-panel hidden">
+        <h3>Create admin account</h3>
+        <p class="hint">Set the email and password you will use to manage this site.</p>
+        <form id="setupForm" class="auth-form">
+          <input type="email" id="setupEmail" placeholder="Your email" required autocomplete="email" />
+          <input type="password" id="setupPassword" placeholder="Password" required minlength="6" autocomplete="new-password" />
+          <input type="password" id="setupPassword2" placeholder="Confirm password" required minlength="6" autocomplete="new-password" />
+          <button class="btn" type="submit">Create account</button>
+        </form>
+      </div>
+
+      <div id="loginPanel" class="modal-panel">
+        <h3>Admin Login</h3>
+        <form id="loginForm" class="auth-form">
+          <input type="email" id="adminEmail" placeholder="Email" required autocomplete="username" />
+          <input type="password" id="adminPassword" placeholder="Password" required autocomplete="current-password" />
+          <button class="btn" type="submit">Sign In</button>
+          <button type="button" class="btn btn-outline" id="forgotPasswordBtn">Forgot Password</button>
+          <button type="button" class="btn btn-google" id="googleSignInBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Sign in with Google
+          </button>
+        </form>
+      </div>
+
+      <div id="forgotPasswordPanel" class="modal-panel hidden">
+        <h3>Reset Password</h3>
+        <p class="hint">Enter your email to reset your password.</p>
+        <form id="forgotPasswordForm" class="auth-form">
+          <input type="email" id="resetEmail" placeholder="Email" required autocomplete="email" />
+          <button class="btn" type="submit">Send Reset Link</button>
+          <button type="button" class="btn btn-outline" id="backToLoginBtn">Back to Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="portfolioDetailModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card modal-card-wide">
+      <button id="closePortfolioDetailBtn" class="close-btn" aria-label="Close">&times;</button>
+      <div class="portfolio-detail-grid">
+        <div class="portfolio-detail-image-wrap">
+          <img id="portfolioDetailImg" src="" alt="" />
+        </div>
+        <div class="portfolio-detail-text">
+          <p class="portfolio-detail-category" id="portfolioDetailCategory"></p>
+          <h3 id="portfolioDetailTitle"></h3>
+          <p class="portfolio-detail-desc" id="portfolioDetailDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script src="./login-fix.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

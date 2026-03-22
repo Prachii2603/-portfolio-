@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Artisan Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="thank-you-container">
+    <div class="thank-you-card">
+      <div class="success-icon">✅</div>
+      <h1>Thank You!</h1>
+      <p class="thank-you-message">
+        Your project inquiry has been received successfully. 
+        We'll review your requirements and get back to you within 24 hours with a detailed proposal.
+      </p>
+      
+      <div class="next-steps">
+        <h3>What happens next?</h3>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <p>We'll review your project details</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <p>Prepare a customized proposal</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <p>Contact you within 24 hours</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <p><strong>Need immediate assistance?</strong></p>
+        <p>📞 <a href="tel:+917385524077">+91 7385524077</a></p>
+        <p>📧 <a href="mailto:manojbodade@gmail.com">manojbodade@gmail.com</a></p>
+      </div>
+
+      <div class="thank-you-actions">
+        <a href="/" class="btn">Back to Home</a>
+        <a href="/#portfolio" class="btn btn-outline">View Portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .thank-you-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #0d0b10 0%, #1a1520 100%);
+    }
+
+    .thank-you-card {
+      background: #1a1520;
+      border: 1px solid #30283a;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .success-icon {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+
+    .thank-you-card h1 {
+      color: #d4af37;
+      margin: 0 0 20px;
+      font-size: 2.5rem;
+    }
+
+    .thank-you-message {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #f4f4f5;
+      margin-bottom: 30px;
+    }
+
+    .next-steps {
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 12px;
+      border: 1px solid #d4af37;
+    }
+
+    .next-steps h3 {
+      color: #d4af37;
+      margin: 0 0 20px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 15px;
+    }
+
+    .step {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-align: left;
+    }
+
+    .step-number {
+      background: #d4af37;
+      color: #161616;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .step p {
+      margin: 0;
+      color: #f4f4f5;
+    }
+
+    .contact-info {
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+    }
+
+    .contact-info p {
+      margin: 8px 0;
+      color: #f4f4f5;
+    }
+
+    .contact-info a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .thank-you-actions {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .thank-you-card {
+        padding: 30px 20px;
+      }
+      
+      .thank-you-actions {
+        flex-direction: column;
+      }
+    }
+  </style>
+</body>
+</html>
